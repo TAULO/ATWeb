@@ -1,0 +1,10 @@
+.admin-image-container {
+    float:left;
+}
+
+#admin-image {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}

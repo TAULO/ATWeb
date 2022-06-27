@@ -1,0 +1,57 @@
+:root {
+    --img-width: 330px;
+    --img-height: 350px;
+}
+
+.list {
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    width: 1090px;
+}
+
+.column {
+    float: left;
+}
+
+
+@keyframes slide-when-load {
+    0% {
+        transform: translateY(100%);
+      }
+      50%, 100% {
+        transform: translateY(0%);
+      }
+}
+
+@keyframes identifier {
+    
+}
+
+.imgItems {
+    opacity: 1;
+    height: var(--img-height);
+    width: var(--img-width);
+    object-fit: cover;
+    border-radius: 10px;
+    animation: 2.5s ease-out slide-when-load;
+}
+
+.imgItems:hover {
+    padding: 0px;
+    /* height: calc(var(--img-height) + 50px);
+    width: calc(var(--img-width) + 50px); */
+    opacity: 0.7;
+    cursor: pointer;
+}
+ 
+.liItems {
+    padding: 15px;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+
+

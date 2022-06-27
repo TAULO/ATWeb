@@ -1,0 +1,31 @@
+.main-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.about-container {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    width: 550px;
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0%;
+}
+
+#about-title {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+
+#about-text {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
