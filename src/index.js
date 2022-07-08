@@ -3,24 +3,31 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./index.css"
-import TestData from './components/TestData/TestData';
+import MainImages from './components/HomepageImages/MainImages';
 import InstagramImages from './components/instagramImages/InstagramImages';
-import Header from "./components/header/Header"
 import About from './components/about/about';
+import ExhibitionTemplate from './components/Exhibition/ExhibitionTemplate';
+import Header from "./components/header/Header"
 import Footer from './components/footer/footer';
 import AddImagesForm from "./components/_admin/AddImageForm/AddImagesForm"
+import AddExhibtionsForm from './components/_admin/AddExhibitionsForm/AddExhibtionsForm';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <Router>
     <Header />
       <Routes>
-        <Route path="/" element={<TestData></TestData>}></Route>
+        <Route path="/" element={<MainImages></MainImages>}></Route>
         <Route path='/instagram' element={<InstagramImages/>}></Route>
-        <Route path='/admin' element={<AddImagesForm></AddImagesForm>}></Route>
+        <Route path='/udstillinger' element={<ExhibitionTemplate></ExhibitionTemplate>}></Route>
           {/* <About></About> */}
       </Routes>
     <Footer />
+    <Routes>
+      <Route path='/admin' element={<AddImagesForm></AddImagesForm>}></Route>
+      <Route path='/admin1' element={<AddExhibtionsForm></AddExhibtionsForm>}></Route>
+    </Routes>
   </Router>
 );
 

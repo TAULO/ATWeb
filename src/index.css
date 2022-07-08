@@ -1,6 +1,14 @@
+html {
+    /* height: 100%;
+    margin: 0px;
+    padding: 0px; */
+}
+
 body {
     background-color: #f4b41a;
     margin: 0px;
+    padding: 0px;
+    min-height: 100%;
 }
 
 h1 {

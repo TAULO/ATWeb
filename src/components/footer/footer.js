@@ -7,8 +7,7 @@ import "./footer.css"
 
 function Footer() {
     return ( 
-        <div className="footer">
-            <div className="footer-container">
+            <div className="footer">
                 <ul>
                     <li id="list-container">
                     {/* <FontAwesomeIcon icon={solid("fa-solid fa-phone")}/> */}
@@ -24,7 +23,6 @@ function Footer() {
                     </li>
                 </ul>
             </div>
-        </div>
      );
 }
 

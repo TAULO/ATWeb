@@ -5,11 +5,8 @@ import "./AddImagesForm.css"
 function AddImagesForm() {
     const firebase = new Firebase()
     const [imageFileURL, setImageFileURL] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
     const [isSelected, setIsSelected] = useState(false)
     let filesArr = []
-    let selectedItemsArr = []
-
 
     useEffect(() => {
         async function getFilesURLFromStorage() {
@@ -17,22 +14,6 @@ function AddImagesForm() {
         }       
         getFilesURLFromStorage()
     }, [])
-
-    function loadingDisplay() {
-        if (isLoading) {
-            return (
-                <div>
-                    <p>waiting for pictures to load...</p>
-                </div>
-            )
-        } else {
-            return(
-                <div>
-                    <p>done loading pictures</p>
-                </div>
-            )
-        }
-    }
 
     function getFilesAdded(e) {
         filesArr = []

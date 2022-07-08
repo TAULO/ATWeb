@@ -13,7 +13,7 @@ function Header() {
                     <Link to="/instagram" id="header-list-links">INSTAGRAM</Link>
                     {/* <li id="header-list-links">INSTAGRAM</li> */}
                     <li id="header-list-links">OM</li>
-                    <li id="header-list-links">UDSTILLINGER</li>
+                    <Link to="/udstillinger" id="header-list-links">UDSTILLINGER</Link>
                 </ul>
         </div>
      );

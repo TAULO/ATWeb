@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from "react"
-import "./TestData.css"
+import "./MainImages.css"
 import Firebase from "../../service/Firebase/FirebaseService"
 
-function TestData() {
+function MainImages() {
     const firebase = new Firebase()
     const [imageFileURL, setImageFileURL] = useState([])
 
@@ -11,18 +11,18 @@ function TestData() {
         async function getFilesURLFromStorage() {
             setImageFileURL(await firebase.getAllFilesFromDB())
         }       
-        // if (imageFileURL.length <= 0) return
-
         getFilesURLFromStorage()
     }, [])
 
     function displayImages() {
-            return imageFileURL.map((item, index) => {
-                return (<div key={index} className="main-column">
-                    <li className="main-li-items" key={index}>
-                        <img className="main-img-items" src={item.url} alt={item.name} onClick={() => window.open(item.url)}></img>
-                    </li>
-                </div>)
+           return imageFileURL.map((item, index) => {
+                return (
+                    <div key={index} className="main-column">
+                        <li className="main-li-items">
+                            <img style={{display: ""}} className="main-img-items" src={item.url} alt={item.name} onClick={() => window.open(item.url)}></img>
+                        </li>
+                    </div>
+                )
             }
         )
     }
@@ -30,10 +30,12 @@ function TestData() {
     return (
         <div className="main-list-container">
             <ul className="main-list">
-                {displayImages()}
+                {
+                    displayImages()
+                }
             </ul>
         </div>
     );
 }
 
-export default TestData;
+export default MainImages;

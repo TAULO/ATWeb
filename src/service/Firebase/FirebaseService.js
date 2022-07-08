@@ -12,12 +12,15 @@ const firebaseConfig = {
 };
 
 const images_path = "images/"
-const _collection = "images" 
+
+const _collection = "images"
+const _collectionExhibition = "exhibitions"
 
 // Initialize Firebase database
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 const dbRef = collection(db, "images")
+const dbRef2 = collection(db, "exhibitions")
 
 // Initialize Firebase storage
 const storage = getStorage()
@@ -38,13 +41,8 @@ class Firebase {
         return await getDownloadURL(storageRef)
     }
 
-    async deleteFileFromStorage() {
-        
-    }
-
     async saveFilesURLToDB(name, type, url) {
         const docRef = doc(db, _collection, name)
-
         return await setDoc(docRef, {
             name: name,
             type: type,
@@ -63,10 +61,32 @@ class Firebase {
         return data;
     }
 
-    async deleteFileFromDB(name, resolved) {
+    async deleteFileFromDB(name) {
         return await deleteDoc(doc(db, _collection, name))
         .then(console.log("[DATABASE]", "Deleted:", name))
         .catch(e => console.log("[DATABASE]", "Error when trying to delete:", name, e))
+    }
+
+    async saveExhiptionToDB(title, description, address, startDate, endDate, url) {
+        const docRef = doc(db, _collectionExhibition, title)
+        return await setDoc(docRef, {
+            title: title,
+            description: description,
+            address: address,
+            startDate: startDate,
+            endDate: endDate,
+            url: url
+        })
+        .then(console.log("[DATABASE]","Added:", title, " to exhibitions"))
+    }
+
+    async getExhibitonFromDB() {
+        const data = []
+        const querySnapshot = await getDocs(dbRef2)
+        querySnapshot.forEach(doc => {
+            data.push(doc.data())
+        })
+        return data;
     }
 }
 
