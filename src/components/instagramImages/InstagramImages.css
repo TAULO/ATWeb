@@ -3,11 +3,27 @@
     --img-height: 350px;
 }
 
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
 .list {
-    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin: 0px;
     justify-content: center;
-    width: 1090px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1150px;
+    background-color: cornsilk;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .column {
@@ -34,24 +50,19 @@
     width: var(--img-width);
     object-fit: cover;
     border-radius: 10px;
-    animation: 2.5s ease-out slide-when-load;
+        /* animation: 2.5s ease-out slide-when-load; */
 }
 
 .imgItems:hover {
     padding: 0px;
-    /* height: calc(var(--img-height) + 50px);
-    width: calc(var(--img-width) + 50px); */
+    height: calc(var(--img-height) + 70px);
+    width: calc(var(--img-width) + 70px);
     opacity: 0.7;
     cursor: pointer;
 }
  
 .liItems {
     padding: 15px;
-}
-
-.list-container {
-    display: flex;
-    justify-content: center;
 }
 
 

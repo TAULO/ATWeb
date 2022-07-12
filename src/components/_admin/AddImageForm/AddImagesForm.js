@@ -63,7 +63,7 @@ function AddImagesForm() {
     }
     
     return (
-        <div>
+        <div className="admin-container">
             <form>
                 <input type="file" multiple={true} onChange={getFilesAdded}></input>
                 <input type="submit" value="upload" onClick={fileAdded}></input>

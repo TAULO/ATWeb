@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Firebase from "../../service/Firebase/FirebaseService";
 import { useEffect } from "react";
 import "./ExhibitionTemplate.css"
@@ -25,17 +25,18 @@ function ExhibitionTemplate(paams) {
                         <div id="exhibiton-image">
                             <img src={element.url} alt=""></img>
                         </div>
-                        <div id="exhibiton-description">
-                            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel porttitor ante, id cursus eros. Etiam ut ligula posuere, gravida metus vitae, vehicula tortor. Phasellus egestas nibh et felis porta varius. In vestibulum ornare nunc posuere interdum. Pellentesque habitant morbi tristique senectus et netus et.
-                            Phasellus egestas nibh et felis porta varius. In vestibulum ornare nunc posuere interdum. Pellentesque habitant morbi tristique senectus et netus et. */}
-                            {element.description}
-                        </div>
-                        <div id="exhibiton-adress">
-                            {element.address}
+                        <div className="exhibiton-flex-container">
+                            <div id="exhibiton-description">
+                                {element.description}
+                            </div>
+                            <div id="exhibition-line"></div>
+                            <div id="exhibiton-adress">
+                                {element.address}
+                            </div>
                         </div>
                         <div id="exhibiton-date-container">
-                            <p>{element.startDate}</p>
-                            <p>{element.endDate}</p>
+                            <p>Starter Den: {element.startDate.replace("T", " kl ")}</p>
+                            <p>Til {"&"} Med: {element.endDate.replace("T", " kl ")}</p>
                         </div>
                     </div>
                 </div>

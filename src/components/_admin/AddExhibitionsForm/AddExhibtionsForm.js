@@ -25,12 +25,12 @@ function AddExhibtionsForm() {
             <form>
                 <div className="exhibition-flex-container">
                     <label>titel</label>
-                    <input value={title} onChange={e => setTitle(e.target.value)}></input>
+                    <input minLength="1" maxLength="40" value={title} onChange={e => setTitle(e.target.value)}></input>
                     <br></br>
                     <label>beskrivelse</label>
-                    <textarea value={description} onChange={e => setDescription(e.target.value)} rows="4" maxLength="80"></textarea>
+                    <textarea value={description} onChange={e => setDescription(e.target.value)} rows="4" minLength="1" maxLength="400"></textarea>
                     <br></br>
-                    <label>adresse</label>
+                    <label minLength="1" maxLength="50">adresse</label>
                     <input value={address} onChange={e => setAddress(e.target.value)}></input>
                     <br></br>
                     <label>start tidspunkt</label>

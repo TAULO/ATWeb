@@ -1,11 +1,14 @@
 .header {
     padding: 30px;
     margin: 0px;
-    background-color: #143d59;
-    top: auto;
+    /* background-color: #143d59; */
+    background-color: #ed7666;
+    top: 0;
+    color: cornsilk;
 }
 
 #header-home-text{
+    display:inline-block;
     position: relative;
     top: 7px;
     left: 30px;
@@ -14,6 +17,7 @@
     font-family: "Savoye LET";
     font-size: 50px;
     justify-content: center;
+    width: 180px;
     /* padding-top: 100px; */
 }
 
@@ -26,6 +30,13 @@
     font-size: larger;
     text-decoration: none;
     color: cornsilk;
+    text-decoration: underline;
+    text-underline-offset: 5px;    
+}
+
+#header-list-links:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 #list {

@@ -1,28 +1,19 @@
-html {
-    /* height: 100%;
-    margin: 0px;
-    padding: 0px; */
-}
-
 body {
-    background-color: #f4b41a;
+    background-color: #fff;
+    /* background-color: #fae5df; */
     margin: 0px;
     padding: 0px;
     min-height: 100%;
 }
 
-h1 {
-    color: cornsilk;
-}
-
-li {
-    color: cornsilk;
-}
-
-p {
-    color: cornsilk;
+img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 ul{
     list-style-type: none;
+}
+
+a {
+    color: cornsilk;
 }
