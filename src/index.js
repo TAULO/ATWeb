@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./index.css"
-import MainImages from './components/HomepageImages/MainImages';
+import Main from './components/main/Main';
 import InstagramImages from './components/instagramImages/InstagramImages';
 import About from './components/about/about';
 import ExhibitionTemplate from './components/Exhibition/ExhibitionTemplate';
@@ -18,7 +18,7 @@ root.render(
    <Router>
     <Header />
       <Routes>
-        <Route path="/" element={<MainImages></MainImages>}></Route>
+        <Route path="/" element={<Main></Main>}></Route>
         <Route path='/instagram' element={<InstagramImages/>}></Route>
         <Route path='/udstillinger' element={<ExhibitionTemplate></ExhibitionTemplate>}></Route>
           {/* <About></About> */}

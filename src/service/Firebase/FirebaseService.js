@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc, setDoc } from 'firebase/firestore/lite';
 import { uploadBytes, getStorage, ref, getDownloadURL } from "firebase/storage"
+import { getAuth } from "firebase/auth"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAtVqPYeAhzVA43mig1fg44Ylg8VblWRNo",
@@ -15,6 +16,9 @@ const images_path = "images/"
 
 const _collection = "images"
 const _collectionExhibition = "exhibitions"
+
+// Initialize Firebase auth 
+const auth = getAuth(firebaseConfig)
 
 // Initialize Firebase database
 const app = initializeApp(firebaseConfig);

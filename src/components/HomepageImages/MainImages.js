@@ -1,14 +1,13 @@
-
 import React, { useEffect, useState } from "react"
 import "./MainImages.css"
 import Firebase from "../../service/Firebase/FirebaseService"
 
 function MainImages() {
-    const firebase = new Firebase()
     const [imageFileURL, setImageFileURL] = useState([])
 
     useEffect(() => {
         async function getFilesURLFromStorage() {
+            const firebase = new Firebase()
             setImageFileURL(await firebase.getAllFilesFromDB())
         }       
         getFilesURLFromStorage()

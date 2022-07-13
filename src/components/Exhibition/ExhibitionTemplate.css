@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     padding: 1rem;
+    padding-top: 2rem;
     padding-bottom: 6rem;
-    /* border: #143d59 5px solid; */
 }
 
 .exhibiton-container {
@@ -19,6 +19,7 @@
     background-color: cornsilk;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     color: #303179;
+    /* color:  #ed7699; */
 }
 
 #exhibiton-title {
@@ -43,12 +44,9 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid; */
 }
 
 #exhibiton-description {
-    /* grid-row: 2; */
-    /* grid-column: 2/3; */
     font-size: 25px;
     word-wrap: break-word;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -56,19 +54,15 @@
 
 #exhibition-line {
     flex: 1;
-    border-bottom: 5px solid;
     align-self: stretch;
     margin-top:10px;
     margin-bottom: 10px;
     justify-self: end;
-    /* color: #141850; */
-    color: #ed7699;
+    border-bottom: 5px solid;
+    color: #ed7666;
 }
 
 #exhibiton-adress {
-    /* grid-row: 2; */
-    /* grid-column: 2; */
-    /* align-self: end; */
     justify-self: flex-end;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -76,10 +70,45 @@
 }
 
 #exhibiton-date-container {
+    display: flex;
+    flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     grid-column: 1/2;
     font-size: 20px;
-    text-decoration: underline;
-    text-decoration-color: #ed7699;
-    text-underline-offset: 5px;
+    /* text-decoration: underline; */
+    /* text-decoration-color: #ed7699;
+    text-underline-offset: 5px; */
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+#exhibition-start-date-line {
+    grid-column: 1/2;
+    border-bottom: 1px solid;
+    color: #ed7666;
+    padding-bottom: 5px;
+}
+
+#exhibition-end-date-line {
+    grid-column: 1/2;
+    border-bottom: 1px solid;
+    color: #ed7666;
+    padding-bottom: 5px;
+}
+
+#exhibiton-start-date-text {
+    align-self: center;
+}
+
+#exhibiton-end-date-text {
+    padding-top: 15px;
+    align-self: center;
+}
+
+.exhibiton-subscribe-form-container {
+   grid-row: 2;
+   grid-column: 1/3;
+   padding-left: 8rem;
+   padding-right: 8rem;
+   padding-bottom: 4rem;
 }

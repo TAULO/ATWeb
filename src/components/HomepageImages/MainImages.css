@@ -1,6 +1,6 @@
 :root {
-    --main-img-width: 550px;
-    --main-img-height: 650px;
+    --main-img-width: 700px;
+    --main-img-height: 800px;
 }
 
 .main-list {
@@ -42,6 +42,13 @@
     width: var(--main-img-width);
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .main-img-items {
+        height: calc(var(--main-img-height) - 500px);
+        width: calc(var(--main-img-width) - 400px);
+    }
 }
 
 .main-img-items:hover {
