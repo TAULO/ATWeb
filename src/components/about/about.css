@@ -1,31 +1,31 @@
 .main-container {
     display: flex;
-    position: relative;
     justify-content: center;
+    padding: 50px;
+    margin-bottom: 30px;
 }
 
 .about-container {  
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    align-items: flex-start;
     height: auto;
-    width: 550px;
-}
-
-.about-list {
-    list-style-type: none;
-    padding: 0%;
+    width: 60%;
+    flex-direction: column;
 }
 
 #about-title {
-    display: flex;
-    justify-content: center;
-    font-style: italic;
+    color: var(--header-background-color);
+    font-size: large;
+    align-self: center;
 }
 
 #about-text {
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
+    color: var(--element-text-color);
+    font-size: 25px;
+    /* text-align: center; */
 }
 
+#about-text-spacing {
+    height: 20px;
+    /* background-color: var(--header-background-color); */
+}

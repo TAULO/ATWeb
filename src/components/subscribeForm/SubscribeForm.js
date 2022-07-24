@@ -1,11 +1,39 @@
 import React from "react";
+import Firebase from "../../service/Firebase/FirebaseService";
 import "./SubscribeForm.css"
+import emailjs from '@emailjs/browser';
+
 
 function SubscribeForm() {
+    const firebase = new Firebase()
 
-    function handleOnClick(e) {
-        const input = document.getElementById("subscribe-form-input").value
-        console.log(input)
+    async function handleOnClick(e)  {
+        e.preventDefault()
+        const email = document.getElementById("subscribe-form-input").value
+        // await firebase.saveEmailAddressesToDB(email)
+        // console.log(await firebase.getEmailAddressesFromTB())
+
+        const element = document.getElementById("reply_to")
+
+        const emails = await firebase.getEmailAddressesFromTB()
+        if (emails !== undefined) {
+            element.value = ""
+            for (let i = 0; i < emails.length; i++) {
+                // element.value += emails[i].email + " "
+            }
+        }
+
+        console.log(element.value)
+        element.value = "besttauloeu@gmail.com"
+
+        // setTimeout(() => {
+        //     emailjs.sendForm('service_p1aieir', 'template_d7tb3vq', e.target, 'L-4ZEWQAhzpfNeb1P')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
+        // }, 5000);
     }
 
     return (
@@ -20,11 +48,11 @@ function SubscribeForm() {
                     </p>
                 </div>
                 <div className="subscribe-form-input-container">
-                    <form>
-                        <input id="subscribe-form-input" type="email" placeholder="Email Adresse" required></input>
-                        <div id="subscribe-form-button" onClick={handleOnClick}>
-                            Abonner
-                        </div>
+                    <form onSubmit={handleOnClick} id="contact-form">
+                        <input type="hidden" id="message" name="message" value="hello from:D"></input>
+                        <input type="hidden" id="reply_to" name="reply_to"></input>
+                        <input type="email" id="subscribe-form-input" placeholder="Email Adresse" required></input>
+                        <input type="submit" id="subscribe-form-button" value="Abonner"></input>
                     </form>
                 </div>
             </div>

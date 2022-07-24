@@ -4,12 +4,11 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #ed7666;
+    background-color: var(--footer-background-color);
     padding: 30px;
-    color: cornsilk;
+    color: var(--header-footer-text-color);
     width: auto;
     grid-template-columns: 1fr;
-    /* flex-basis: auto; */
     font-size: large;
 }
 
@@ -31,6 +30,10 @@
     grid-row: 1/3;
     grid-column: 2;
     margin-right: 50px;
+}
+
+.svg-inline--fa  {
+    /* color: #4AD7D1; */
 }
 
 #instagram-icon-container:hover {

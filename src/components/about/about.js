@@ -5,14 +5,20 @@ function About() {
     return (
         <div className="main-container">
             <div className="about-container">
-                <ul className="about-list">
-                    <h1 id="about-title">    
-                        Min passion 
-                    </h1>
-                    <p id="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium ac augue nec volutpat. Suspendisse potenti. Fusce finibus sem nulla, at aliquam ipsum rhoncus sed. Ut finibus dignissim libero et semper. Sed et pellentesque velit. Donec accumsan turpis sollicitudin, gravida ex vitae, porta nisl. Morbi tristique lorem ut scelerisque fermentum. Aenean sodales sapien eget lacus convallis, quis hendrerit tellus rhoncus.
-                 </p>
-            </ul>
+                <div id="about-title">
+                    <h1>Min Passion</h1>    
+                </div>
+                <div id="about-text">
+                Mit navn er Anette Taulo jeg bor i Skjern. 
+                Min store passion og interesse er at bruge timevis på at male og fordybe mig i kunstens univers. 
+                <div id="about-text-spacing"></div>
+                Interesse for kunst/maleri startede tilbage i 2005.
+                Jeg bliver aldrig ”mæt” af interessen for at male, fordi der opstår altid nye udfordringer og nye ting der skal prøves af.
+                <div id="about-text-spacing"></div>
+                Min malerstil er præget af det rå og abstrakte look, men også mange farver. Jeg bruger meget maling på mine malerier, hvor jeg bruger spartel, pensel og svampe, for at frembringe det rå look.
+                <div id="about-text-spacing"></div>
+                Fra begyndelsen af min maler/kunst-rejse har jeg udstillet mine malerier forskellige steder i Vestjylland, hvor jeg har fået meget positiv omtale og anerkendelse for mine malerier
+                </div>
          </div>
         </div>
         

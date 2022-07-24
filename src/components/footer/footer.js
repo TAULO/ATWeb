@@ -7,21 +7,6 @@ import "./footer.css"
 function Footer() {
     return ( 
             <div className="footer">
-                {/* <ul>
-                    <li id="list-container">
-                        <div id="telf-container">
-                            <p>Telf: 45+ 00 11 22 33</p>
-                        </div>
-                    </li>
-                    <li id="list-container">
-                        <div id="mail-container">
-                            <p>e-mail: email123@hotmail.com</p>
-                        </div>
-                    </li>
-                    <li>
-                        <FontAwesomeIcon icon={faInstagram} />                   
-                    </li>
-                </ul> */}
                 <div id="telf-container">
                     Telf: 45+ 00 11 22 33
                 </div>

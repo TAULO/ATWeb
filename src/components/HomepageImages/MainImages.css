@@ -1,6 +1,15 @@
 :root {
-    --main-img-width: 700px;
+    --main-img-width: 800px;
     --main-img-height: 800px;
+}
+
+.main-list-container {
+    white-space: nowrap;
+    justify-content: center;
+    background-color: var(--header-background-color);
+    padding-top: 30px;
+    padding-bottom: 100px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
 
 .main-list {
@@ -8,7 +17,7 @@
     padding: 0px;
     margin: 0px;
     justify-content: center;
-    /* width: 100%; */
+    width: 100%;
     overflow: hidden;
     /* animation: slideshow 10s linear infinite; */
 }
@@ -16,6 +25,11 @@
 .main-column {
     display: inline-block;
     white-space: nowrap;
+    /* background-color: var(--element-background-color); */
+    border-radius: 10px;
+    box-shadow: none;
+    /* padding: 30px;
+    padding-bottom: 25px; */
 }
 
 /* @keyframes slide {
@@ -47,7 +61,7 @@
 @media only screen and (max-width: 400px) {
     .main-img-items {
         height: calc(var(--main-img-height) - 500px);
-        width: calc(var(--main-img-width) - 400px);
+        width: calc(var(--main-img-width) - 500px);
     }
 }
 
@@ -60,12 +74,8 @@
 }
  
 .main-li-items {
-    padding: 15px;
+   
 }
 
-.main-list-container {
-    white-space: nowrap;
-    justify-content: center;
-}
 
 

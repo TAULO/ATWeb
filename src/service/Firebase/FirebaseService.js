@@ -16,20 +16,23 @@ const images_path = "images/"
 
 const _collection = "images"
 const _collectionExhibition = "exhibitions"
+const _collectionEmailAdresses = "SubscribersEmail"
 
 // Initialize Firebase auth 
-const auth = getAuth(firebaseConfig)
+// const auth = getAuth(firebaseConfig)
 
 // Initialize Firebase database
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
-const dbRef = collection(db, "images")
-const dbRef2 = collection(db, "exhibitions")
+const dbRef = collection(db, _collection)
+const dbRef2 = collection(db, _collectionExhibition)
+const dbRef3 = collection(db, _collectionEmailAdresses)
 
 // Initialize Firebase storage
 const storage = getStorage()
 
 class Firebase {
+    // ------------------STORAGE------------------
     async uploadFilesToStorage(name, file, type) {
         const metadata = {
             contentType: type
@@ -44,7 +47,8 @@ class Firebase {
         const storageRef = ref(storage, images_path + name)
         return await getDownloadURL(storageRef)
     }
-
+    
+    // ------------------DATEBASE (URL)------------------
     async saveFilesURLToDB(name, type, url) {
         const docRef = doc(db, _collection, name)
         return await setDoc(docRef, {
@@ -71,6 +75,8 @@ class Firebase {
         .catch(e => console.log("[DATABASE]", "Error when trying to delete:", name, e))
     }
 
+    // ------------------DATABASE (EXHIBITION)------------------
+
     async saveExhiptionToDB(title, description, address, startDate, endDate, url) {
         const docRef = doc(db, _collectionExhibition, title)
         return await setDoc(docRef, {
@@ -87,6 +93,24 @@ class Firebase {
     async getExhibitonFromDB() {
         const data = []
         const querySnapshot = await getDocs(dbRef2)
+        querySnapshot.forEach(doc => {
+            data.push(doc.data())
+        })
+        return data;
+    }
+
+    // ------------------DATABASE (EMAIL ADRESSES)------------------
+    async saveEmailAddressesToDB(email) {
+        const docRef = doc(db, _collectionEmailAdresses, email)
+        return await setDoc(docRef, {
+            email: email
+        })
+        .then(console.log("[DATABASE]","Added:", email, " to emails"))
+    }
+
+    async getEmailAddressesFromTB() {
+        const data = []
+        const querySnapshot = await getDocs(dbRef3)
         querySnapshot.forEach(doc => {
             data.push(doc.data())
         })

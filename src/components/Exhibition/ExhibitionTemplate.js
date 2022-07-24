@@ -55,7 +55,6 @@ function ExhibitionTemplate() {
         return(
             <div className="exhibiton-main-container">
                 <div className="exhibiton-container" style={{
-                    backgroundColor: "#fff", 
                     boxShadow: "none"}}>
                     <div id="exhibiton-title">
                         <h1>Ingen udstillinger i den nærmeste fremtid</h1>

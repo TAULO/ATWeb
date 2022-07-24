@@ -2,9 +2,10 @@
     padding: 30px;
     margin: 0px;
     /* background-color: #143d59; */
-    background-color: #ed7666;
+    background-color: var(--header-background-color);
     top: 0;
-    color: cornsilk;
+    color: var(--header-footer-text-color);
+    /* color: #e9e7dc; */
 }
 
 #header-home-text{
@@ -35,7 +36,6 @@
 #header-list-links {
     padding-right: 25px;
     font-size: larger;
-    color: cornsilk;
     text-decoration: underline;
     text-underline-offset: 5px;   
 }
